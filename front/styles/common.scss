@@ -23,12 +23,10 @@ body {
 }
 header, footer, article, section, nav, figure, aside, main { display: block; }
 input:focus, select:focus, textarea:focus, button:focus, a:focus { outline:none; }
-
 input.ng-dirty.ng-invalid {
   border: 1px solid #822;
   background-color: #fcc;
 }
-
 hr {
   display: block;
   height: 1px;
@@ -37,17 +35,14 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-
 audio, canvas, img, video {
   vertical-align: middle;
 }
-
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
-
 textarea {
   margin: 0;
   padding: 0;
