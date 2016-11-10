@@ -48,23 +48,19 @@ textarea {
   padding: 0;
   resize: vertical;
 }
-
 :after, :before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box
 }
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -73,29 +69,23 @@ textarea {
 .clearfix:after {
   clear: both;
 }
-
 h1 {
   font-size: 40px;
   margin-bottom: 15px;
   padding-bottom: 2px;
 }
-
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 p {
   padding: 0 0 15px 0;
   line-height: 18px;
 }
-
 a:hover{ cursor: pointer; }
-
 .main-container, main {
   height: 100%;
 }
-
 /* ==========================================================================
    Loading Bar
    ========================================================================== */
