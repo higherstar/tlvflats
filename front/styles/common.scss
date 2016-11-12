@@ -196,10 +196,8 @@ footer {
     margin: 0;
     padding: 0 0 16px;
   }
-
   input {
   }
-
   .submit {
     background: $primary-color;
     color: #fff;
@@ -210,7 +208,6 @@ footer {
       color: #fff;
     }
   }
-
   ul {
     list-style: outside none none;
     margin: 0;
@@ -225,12 +222,10 @@ footer {
       a {
         color: #fff;
         text-decoration: none;
-
         .fa {
           margin-right: 4px;
           font-size: 21px;
         }
-
         &:hover {
           color: #1190e7;
           text-decoration: none;
