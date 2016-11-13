@@ -257,7 +257,6 @@ footer {
     }
   }
 }
-
 /* ==========================================================================
    Animation
    ========================================================================== */
@@ -271,34 +270,28 @@ footer {
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 @-webkit-keyframes slideDown {
   0% { -webkit-transform: translateY(-100%) }
   100% { -webkit-transform: translateY(0) }
 }
-
 @-moz-keyframes slideDown {
   0% { -moz-transform: translateY(-100%) }
   100% { -moz-transform: translateY(0) }
 }
-
 @-o-keyframes slideDown {
   0% { -o-transform: translateY(-100%) }
   100% { -o-transform: translateY(0) }
 }
-
 @keyframes slideDown {
   0% { transform: translateY(-100%) }
   100% { transform: translateY(0) }
 }
-
 .animated.slideDown {
   -webkit-animation-name: slideDown;
   -moz-animation-name: slideDown;
   -o-animation-name: slideDown;
   animation-name: slideDown;
 }
-
 @-webkit-keyframes slideUp {
   0% { -webkit-transform: translateY(0) }
   100% { -webkit-transform: translateY(-100%) }
