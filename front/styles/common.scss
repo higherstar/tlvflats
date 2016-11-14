@@ -308,18 +308,15 @@ footer {
   0% { transform: translateY(0) }
   100% { transform: translateY(-100%) }
 }
-
 .animated.slideUp {
   -webkit-animation-name: slideUp;
   -moz-animation-name: slideUp;
   -o-animation-name: slideUp;
   animation-name: slideUp;
 }
-
 /* ==========================================================================
    Dialogs
    ========================================================================== */
-
 md-dialog.photo {
   max-width: 100%;
   max-height: none;
