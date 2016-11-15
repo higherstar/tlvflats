@@ -1,5 +1,4 @@
 @import 'variables';
-
 /* ==========================================================================
    Fonts
    ========================================================================== */
@@ -113,7 +112,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* ==========================================================================
    Custom Icons
    ========================================================================== */
@@ -200,7 +198,6 @@
 }
 
 // fontello
-
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?98624728');
@@ -211,7 +208,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -227,7 +223,6 @@
   line-height: 1em;
   margin-left: .2em;
 }
-
 .icon-surface:before { content: '\e800'; }
 .icon-occupancy:before { content: '\e801'; }
 .icon-parking:before { content: '\e802'; }
