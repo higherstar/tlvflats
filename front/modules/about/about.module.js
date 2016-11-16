@@ -3,7 +3,6 @@ angular
         'tlvflats.base'
     ])
     .config(configure);
-
 configure.$inject = ['$stateProvider'];
 function configure($stateProvider) {
     $stateProvider
