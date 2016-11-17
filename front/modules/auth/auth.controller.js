@@ -1,13 +1,10 @@
 angular
     .module('tlvflats.auth')
     .controller('LoginController', LoginController);
-
 LoginController.$inject = ['$auth', 'toastr', '$state'];
-
 function LoginController($auth, toastr, $state) {
     var self = this;
     this.Authentication = $auth;
-
     this.signUp = () => {
         $auth.signup(self.user)
             .then(function(result) {
@@ -21,7 +18,6 @@ function LoginController($auth, toastr, $state) {
                 toastr.error(error.data.message);
             });
     };
-
     this.login = () => {
         $auth.login(self.user)
             .then(function(result) {
