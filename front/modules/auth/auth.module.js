@@ -1,13 +1,11 @@
 angular
     .module('tlvflats.auth', [
         'tlvflats.base',
-
         'satellizer',
         'permission'
     ])
     .config(configure)
     .run(run);
-
 configure.$inject = ['$stateProvider'];
 function configure($stateProvider) {
     $stateProvider
@@ -18,7 +16,6 @@ function configure($stateProvider) {
             templateUrl : 'auth/auth.controller.html'
         });
 }
-
 run.$inject = [];
 function run() {
 }

@@ -34,7 +34,6 @@ function LoginController($auth, toastr, $state) {
                 toastr.error(error.data.message);
             });
     };
-
     this.authenticate = (provider) => {
         $auth.authenticate(provider)
             .then(function(result) {
