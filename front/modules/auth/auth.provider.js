@@ -23,20 +23,16 @@ function AuthenticationProvider() {
             }
             update(data) {
             }
-
             clearUser() {
                 this.user = null;
                 Storage.remove('user');
             }
-
             isAuthenticated() {
                 return (!! this.user);
             }
-
             logout() {
             }
         }
-
         return new Authentication();
     }
 }
