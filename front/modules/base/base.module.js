@@ -8,7 +8,6 @@ angular
     ])
     .config(configure)
     .run(run);
-
 configure.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider', 'uiGmapGoogleMapApiProvider', '$mdThemingProvider'];
 function configure($locationProvider, $stateProvider, $urlRouterProvider, GoogleMapApiProviders, $mdThemingProvider) {
     $locationProvider.html5Mode({
@@ -16,7 +15,6 @@ function configure($locationProvider, $stateProvider, $urlRouterProvider, Google
         requireBase : true,
         rewriteLinks : true
     });
-
     $stateProvider
         .state('front', {
             url : '/',
@@ -35,9 +33,7 @@ function configure($locationProvider, $stateProvider, $urlRouterProvider, Google
             url : '/500',
             template : '<h1>Internal error</h1>'
         });
-
     $urlRouterProvider.otherwise('/');
-
     GoogleMapApiProviders.configure({
         v: '3.17',
         libraries: '',
