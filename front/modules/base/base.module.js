@@ -40,7 +40,6 @@ function configure($locationProvider, $stateProvider, $urlRouterProvider, Google
         china: true,
         key: 'AIzaSyA0LgN5tWhnX-DYnbsiRPrd3QsaxlsGiC4'
     });
-
     $mdThemingProvider.theme('indigo')
         .primaryPalette('indigo', {
             'default': '500',
@@ -55,12 +54,10 @@ function configure($locationProvider, $stateProvider, $urlRouterProvider, Google
             'hue-3': 'A100'
         })
         .warnPalette('orange');
-
     $mdThemingProvider.theme('lime')
         .primaryPalette('lime')
         .accentPalette('orange')
         .warnPalette('blue');
-
     $mdThemingProvider.theme('red')
         .primaryPalette('pink')
         .accentPalette('purple')
