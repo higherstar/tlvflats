@@ -62,20 +62,15 @@ function configure($locationProvider, $stateProvider, $urlRouterProvider, Google
         .primaryPalette('pink')
         .accentPalette('purple')
         .warnPalette('orange');
-
     $mdThemingProvider.theme('yellow')
         .primaryPalette('orange')
         .accentPalette('yellow')
         .warnPalette('blue');
-
     //$mdThemingProvider.alwaysWatchTheme(true);
 }
-
 run.$inject = ['$state', '$rootScope'];
 function run($state, $root) {
     $root.$state = $state;
-
-
     // Take theme from locastorage
     $root.theme = 'indigo';
 }
