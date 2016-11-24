@@ -1,11 +1,9 @@
 var $http, $q;
-
 class CommonService {
     constructor($$http, $$q) {
         $http = $$http;
         $q = $$q;
     }
-
     geocode(address) {
         return $q(function (resolve, reject) {
             var geocoder = new google.maps.Geocoder();
@@ -22,11 +20,8 @@ class CommonService {
             });
         });
     }
-
 }
-
 CommonService.$inject = ['$http', '$q'];
-
 angular
     .module('tlvflats.base')
     .service('CommonService', CommonService);
