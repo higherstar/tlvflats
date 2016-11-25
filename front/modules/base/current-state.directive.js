@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.base')
     .filter('expandState', expandState);
-
 function expandState() {
     return function(input) {
         let parts = input.split('.'),
