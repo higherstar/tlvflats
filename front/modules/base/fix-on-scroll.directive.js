@@ -34,12 +34,9 @@ function fixOnScroll($window, $timeout) {
                     .css('width', '100%');
             }
         };
-
         $timeout(fix, 500);
-
         $w.on('resize', fix);
         $w.on('scroll', fix);
-
         scope.$on('$destroy', function () {
             $w.off('resize', fix);
             $w.off('scroll', fix);
