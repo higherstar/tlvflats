@@ -1,12 +1,9 @@
 var _theme;
-
 angular
     .module('tlvflats.base')
-
     .config(['$mdThemingProvider', function($mdThemingProvider){
         _theme = $mdThemingProvider.theme();
     }])
-
     .directive('mdStyleColor', ['$mdColorPalette',
         function ($mdColorPalette) {
             return {
