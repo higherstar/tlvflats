@@ -28,9 +28,7 @@ angular
                             var colorValue = $mdColorPalette[colorA][hueA] ?
                                 $mdColorPalette[colorA][hueA].value :
                                 $mdColorPalette[colorA]['500'].value;
-
                             element.css(p, 'rgb('+colorValue.join(',')+')');
-
                         }
                     }
                 }
