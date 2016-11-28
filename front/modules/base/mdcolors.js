@@ -20,13 +20,11 @@ angular
                             // Absolute color: 'orange'
                             var colorA = themeColors[colorR] ?
                                 themeColors[colorR].name : colorR;
-
                             // Absolute Hue: '500'
                             var hueA =
                                 themeColors[colorR] ?
                                 themeColors[colorR].hues[hueR] || hueR :
                                     hueR;
-
                             var colorValue = $mdColorPalette[colorA][hueA] ?
                                 $mdColorPalette[colorA][hueA].value :
                                 $mdColorPalette[colorA]['500'].value;
