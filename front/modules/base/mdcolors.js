@@ -12,15 +12,11 @@ angular
                 link: function (scope, element, attrs) {
                     for (var p in scope.mdStyleColor) {
                         if (scope.mdStyleColor.hasOwnProperty(p)) {
-
                             var themeColors = _theme.colors;
-
                             var split = (scope.mdStyleColor[p] || '').split('.');
                             if (split.length < 2) split.unshift('primary');
-
                             var hueR   = split[1] || 'hue-1';    // 'hue-1'
                             var colorR = split[0] || 'primary';  // 'warn'
-
                             // Absolute color: 'orange'
                             var colorA = themeColors[colorR] ?
                                 themeColors[colorR].name : colorR;
