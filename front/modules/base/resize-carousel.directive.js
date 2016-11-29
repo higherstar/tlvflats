@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.base')
     .directive("resizeCarousel", scroll);
-
 scroll.$inject = ['$window', '$timeout'];
 function scroll($window, $timeout) {
     return function (scope, element) {
@@ -14,11 +13,9 @@ function scroll($window, $timeout) {
                 .css('max-height', element.width()*0.66 + 135 + 'px')
                 .css('min-height', element.width()*0.66 + 135 + 'px');
         };
-
         $timeout(function(){
             resizing();
         }, 0);
-
         angular.element(window).bind('resize', function () {
             resizing();
         });
