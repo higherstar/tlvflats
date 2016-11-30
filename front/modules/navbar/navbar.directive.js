@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.navbar')
     .directive('navbar', NavbarDirective);
-
 function NavbarDirective() {
     return {
         restrict : 'E',
@@ -10,9 +9,7 @@ function NavbarDirective() {
         controllerAs : 'self'
     }
 }
-
 NavbarDirectiveController.$inject = ['$scope', '$timeout', '$mdSidenav', '$log', '$mdMedia'];
-
 function NavbarDirectiveController($scope, $timeout, $mdSidenav, $log, $mdMedia) {
     var self = this;
 
