@@ -12,11 +12,8 @@ function NavbarDirective() {
 NavbarDirectiveController.$inject = ['$scope', '$timeout', '$mdSidenav', '$log', '$mdMedia'];
 function NavbarDirectiveController($scope, $timeout, $mdSidenav, $log, $mdMedia) {
     var self = this;
-
     self.$mdMedia = $mdMedia;
-
     self.toggleSidenav = buildDelayedToggler('left');
-
     self.isOpenSidenav = () => {
         return $mdSidenav('left').isOpen();
     };
