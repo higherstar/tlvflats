@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.base')
     .service('anchorSmoothScroll', anchorSmoothScroll);
-
 function anchorSmoothScroll(){
     this.scrollTo = function(eID, padding) {
         var startY = currentYPosition();
@@ -25,7 +24,6 @@ function anchorSmoothScroll(){
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
-
         function currentYPosition() {
             // Firefox, Chrome, Opera, Safari
             if (self.pageYOffset) return self.pageYOffset;
@@ -36,7 +34,6 @@ function anchorSmoothScroll(){
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }
-
         function elmYPosition(eID) {
             var elm = document.getElementById(eID);
             var y = elm.offsetTop;
@@ -47,10 +44,8 @@ function anchorSmoothScroll(){
             } return y;
         }
     };
-
     this.scrollInCont = function(container, eID) {
         var container = $(container);
-
         var scrollTo = $('#' + eID);
         container.animate({
             scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
