@@ -38,12 +38,10 @@ function NavbarDirectiveController($scope, $timeout, $mdSidenav, $log, $mdMedia)
                 });
         }, 200);
     }
-
     self.close = function () {
         $mdSidenav('left').close()
             .then(function () {
                 $log.debug("close LEFT is done");
             });
-
     };
 }
