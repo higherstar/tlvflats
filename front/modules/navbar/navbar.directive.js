@@ -17,10 +17,8 @@ function NavbarDirectiveController($scope, $timeout, $mdSidenav, $log, $mdMedia)
     self.isOpenSidenav = () => {
         return $mdSidenav('left').isOpen();
     };
-
     function debounce(func, wait, context) {
         var timer;
-
         return function debounced() {
             var context = $scope,
                 args = Array.prototype.slice.call(arguments);
@@ -31,7 +29,6 @@ function NavbarDirectiveController($scope, $timeout, $mdSidenav, $log, $mdMedia)
             }, wait || 10);
         };
     }
-
     function buildDelayedToggler(navID) {
         return debounce(function() {
             $mdSidenav(navID)
