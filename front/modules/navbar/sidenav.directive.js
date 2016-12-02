@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.navbar')
     .directive('sidenav', SidenavDirective);
-
 function SidenavDirective() {
     return {
         restrict : 'E',
@@ -10,15 +9,11 @@ function SidenavDirective() {
         controllerAs : 'self'
     }
 }
-
 SidenavDirectiveController.$inject = ['$scope', '$rootScope', '$mdMedia'];
-
 function SidenavDirectiveController($scope, $rootScope, $mdMedia) {
     var self = this,
         date = moment().format("DD-MM-YY");
-
     self.$mdMedia = $mdMedia;
-
     self.filters = {
         dateFrom : date,
         dateTo : '',
