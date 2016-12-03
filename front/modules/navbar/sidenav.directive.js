@@ -19,16 +19,13 @@ function SidenavDirectiveController($scope, $rootScope, $mdMedia) {
         dateTo : '',
         visitors : '1 guest'
     };
-
     self.dateOptions = {
         formatYear: 'yyyy',
         startingDay: 1
     };
-
     self.search = () => {
         $rootScope.$broadcast('search:fake')
     };
-
     self.changeDate = (date, datepicker, days) => {
         var new_date = moment(date, "DD-MM-YY");
         new_date.add(days, 'days');
