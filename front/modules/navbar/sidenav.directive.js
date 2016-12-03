@@ -32,7 +32,6 @@ function SidenavDirectiveController($scope, $rootScope, $mdMedia) {
         self.filters[datepicker] = new_date.format('DD-MM-YY');
     };
     self.changeDate(self.filters.dateFrom, 'dateTo', 1);
-
     self.themes = [{
         title : 'indigo',
         primary : '#3F51B5',
@@ -50,7 +49,6 @@ function SidenavDirectiveController($scope, $rootScope, $mdMedia) {
         primary : '#F57C00',
         accent : '#FFEB3B'
     }];
-
     self.changeTheme = function(theme) {
         $rootScope.theme = theme;
     };
