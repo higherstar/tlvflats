@@ -1,7 +1,6 @@
 angular
     .module('tlvflats.property')
     .directive('gallery', Gallery);
-
 function Gallery() {
     return {
         restrict : 'A',
@@ -12,12 +11,9 @@ function Gallery() {
         controller : GalleryController
     }
 }
-
 GalleryController.$inject = ['$scope', '$timeout', '$rootScope', '$mdDialog'];
-
 function GalleryController($scope, $timeout, $rootScope, $mdDialog) {
     $scope.current = 0;
-
     $scope.changeCurrent = (i) => {
         if (i < 0) return;
         $scope.current = i;
