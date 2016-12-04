@@ -19,7 +19,6 @@ function GalleryController($scope, $timeout, $rootScope, $mdDialog) {
         $scope.current = i;
         change();
     };
-
     $scope.openFullscreen = function(ev) {
         $mdDialog.show({
                 controller: 'DialogController',
@@ -35,7 +34,6 @@ function GalleryController($scope, $timeout, $rootScope, $mdDialog) {
                 }
             });
     };
-
     var change = () => {
         var previewsWidth = angular.element($('.previews .images')).width();
         var visblock = angular.element($('.previews .images .vis-block')).width();
