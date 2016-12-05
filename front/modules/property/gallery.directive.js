@@ -38,26 +38,21 @@ function GalleryController($scope, $timeout, $rootScope, $mdDialog) {
         var previewsWidth = angular.element($('.previews .images')).width();
         var visblock = angular.element($('.previews .images .vis-block')).width();
         var imageWidth = angular.element($('.previews .img')).width();
-
         var offset = $scope.current * imageWidth;
-
         if ((visblock - previewsWidth) < 0) {
             $scope.offset = 0;
             return;
         }
-
         if (offset > (visblock - previewsWidth)) {
             $scope.offset = -(visblock - previewsWidth) - 10;
         } else {
             $scope.offset = -$scope.current * imageWidth;
         }
     };
-
     $timeout(function(){
         change();
         $rootScope.$emit('gallery:ready')
     }, 0);
-
     angular.element(window).bind('resize', function () {
         change();
     });
