@@ -9,21 +9,17 @@ function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi,
     self.property = property;
     self.frameUrl = $sce.trustAsResourceUrl("https://www.beds24.com/booking2.php?propid=" + property.propid + "&amp;numdisplayed=0&amp;numnight=1&amp;numadult=2-1&amp;referer=iframe&amp;wmode=transparent");
     self.property.long_description = $sce.trustAsHtml(self.property.long_description);
-
     self.filters = {
         dateFrom : date,
         dateTo : '',
         visitors : '1 guest'
     };
-
     self.changeDate = (date, datepicker, days) => {
         var new_date = moment(date, "DD-MM-YY");
         new_date.add(days, 'days');
         self.filters[datepicker] = new_date.format('DD-MM-YY');
     };
-
     self.changeDate(self.filters.dateFrom, 'dateTo', 1);
-
     uiGmapGoogleMapApi.then(function(maps) {
         setTimeout(function () {
             self.showMap = true;
