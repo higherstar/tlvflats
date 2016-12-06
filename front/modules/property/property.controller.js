@@ -1,16 +1,13 @@
 angular
     .module('tlvflats.property')
     .controller('PropertyController', PropertyController);
-
 PropertyController.$inject = ['$scope', '$window', '$sce', 'property', 'uiGmapGoogleMapApi','anchorSmoothScroll'];
 function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi, anchorSmoothScroll) {
     var self = this,
         date = moment().format("DD-MM-YY");
-
     self.showMap = false;
     self.property = property;
     self.frameUrl = $sce.trustAsResourceUrl("https://www.beds24.com/booking2.php?propid=" + property.propid + "&amp;numdisplayed=0&amp;numnight=1&amp;numadult=2-1&amp;referer=iframe&amp;wmode=transparent");
-
     self.property.long_description = $sce.trustAsHtml(self.property.long_description);
 
     self.filters = {
