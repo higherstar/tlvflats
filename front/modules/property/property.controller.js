@@ -36,7 +36,6 @@ function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi,
                 address = address + ' ' + place.place.name;
             });
         }
-
         self.map = {
             zoom: 3,
             events : {
@@ -53,12 +52,10 @@ function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi,
                 icon:'/images/marker-sm.png'
             }
         };
-
         if (!self.property.latitude && !self.property.longitude) {
             geocoder.geocode({ address: address }, function (res, status) {
                 self.property.latitude = res[0].geometry.location.lat();
                 self.property.longitude = res[0].geometry.location.lng();
-
                 latlng = new maps.LatLng(self.property.latitude, self.property.longitude);
                 bounds.extend(latlng);
 
