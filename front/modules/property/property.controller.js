@@ -80,7 +80,6 @@ function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi,
         } else {
             latlng = new maps.LatLng(self.property.latitude, self.property.longitude);
             bounds.extend(latlng);
-
             angular.extend(self.map, {
                 center: {
                     latitude: bounds.getCenter().lat(),
@@ -100,7 +99,6 @@ function PropertyController($scope, $window, $sce, property, uiGmapGoogleMapApi,
             });
         }
     });
-
     self.scrollTo = (el_id) => {
         anchorSmoothScroll.scrollTo(el_id, 124);
     };
