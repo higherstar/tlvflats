@@ -34,7 +34,6 @@ class PropertyService {
     }
 }
 PropertyService.$inject = ['$http', '$q'];
-
 angular
     .module('tlvflats.search')
     .service('PropertyService', PropertyService);
