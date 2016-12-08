@@ -1,11 +1,9 @@
 var $http, $q;
-
 class PropertyService {
     constructor($$http, $$q) {
         $http = $$http;
         $q = $$q;
     }
-
     getList(filters) {
         return $q(function (resolve, reject) {
             $http
@@ -21,7 +19,6 @@ class PropertyService {
                 });
         })
     }
-
     getOne(id) {
         return $q(function (resolve, reject) {
             $http
