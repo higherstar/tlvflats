@@ -33,7 +33,6 @@ class PropertyService {
         })
     }
 }
-
 PropertyService.$inject = ['$http', '$q'];
 
 angular
