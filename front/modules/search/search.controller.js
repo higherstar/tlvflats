@@ -20,7 +20,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                     timer;
                 var promises = self.list.map(function (apartment) {
                     var defer = $q.defer();
-
                     if (!apartment.latitude || !apartment.longitude) {
                         var address = apartment.address;
                         if (address.indexOf(",") <= -1) {
@@ -28,7 +27,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                                 address = address + ' ' + place.place.name;
                             });
                         }
-
                         geocoder.geocode({address: address}, function (res, status) {
                             if (status == "OK") {
                                 apartment.latitude = res[0].geometry.location.lat();
