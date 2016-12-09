@@ -7,7 +7,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
         timer;
     self.showMap = false;
     self.loading = true;
-
     self.search = (place) => {
         PropertyService
             .getList(self.filters)
@@ -19,7 +18,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                 var geocoder = new google.maps.Geocoder(),
                     bounds = new maps.LatLngBounds(),
                     timer;
-
                 var promises = self.list.map(function (apartment) {
                     var defer = $q.defer();
 
