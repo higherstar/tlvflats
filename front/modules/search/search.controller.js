@@ -1,12 +1,10 @@
 angular
     .module('tlvflats.search')
     .controller('SearchController', SearchController);
-
 SearchController.$inject = ['$rootScope', 'PropertyService', 'uiGmapGoogleMapApi', 'anchorSmoothScroll', '$timeout', '$q'];
 function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, anchorSmoothScroll, $timeout, $q) {
     var self = this,
         timer;
-
     self.showMap = false;
     self.loading = true;
 
