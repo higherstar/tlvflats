@@ -34,9 +34,7 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                             }
                             defer.resolve(apartment);
                         })
-
                     } else defer.resolve(apartment);
-
                     return defer.promise;
                 });
 
