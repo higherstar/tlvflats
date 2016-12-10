@@ -54,7 +54,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                                 self.map.window.model = model;
                                 self.map.window.show = true;
                                 model.hover = true;
-
                                 timer = $timeout(function () {
                                     anchorSmoothScroll.scrollInCont('.property-list', model.id);
                                 }, 1500);
