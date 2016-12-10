@@ -37,14 +37,12 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
                     } else defer.resolve(apartment);
                     return defer.promise;
                 });
-
                 $q.all(promises).then(function () {
                     for (var i = 0; i < self.list.length; i++) {
                         self.list[i].show = false;
                         var latlng = new maps.LatLng(self.list[i].latitude, self.list[i].longitude);
                         bounds.extend(latlng);
                     }
-
                     self.map = {
                         center: {
                             latitude: bounds.getCenter().lat(),
