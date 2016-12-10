@@ -96,7 +96,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
             });
     };
     self.search();
-
     self.mouseover = (model) => {
         $timeout.cancel(timer);
         model.hover = true;
@@ -109,7 +108,6 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
         self.map.window.show = false;
         model.hover = false;
     };
-
     $rootScope.$on('search:fake', function(e){
         self.loading = true;
         $timeout(function(){
