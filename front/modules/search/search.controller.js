@@ -114,12 +114,10 @@ function SearchController($rootScope, PropertyService, uiGmapGoogleMapApi, ancho
             self.loading = false;
         }, 1500)
     });
-
     self.clear = function () {
         self.filters = {};
         // TODO: update search result
     };
-
     self.scrollTo = (el_id) => {
         anchorSmoothScroll.scrollTo(el_id, 54);
     };
